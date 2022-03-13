@@ -72,5 +72,3 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /[Aa]ssets/Editor/WakaTime/*
 /Assets/Editor/WakaTime/*
-Assets/PolygonPrototype/
-Assets/PolygonPrototype.meta
