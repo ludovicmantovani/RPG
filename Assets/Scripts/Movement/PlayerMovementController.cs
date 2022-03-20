@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,14 @@ public class PlayerMovementController : MonoBehaviour
 {
     private Vector3 _targetPosition;
     private NavMeshAgent _navMeshAgent;
+    private Animator _animator;
 
     void Start()
     {
         // Recuperation du nav mesh agent
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        // Recupération de l'animator
+        _animator = GetComponent<Animator>();
         _targetPosition = transform.position;
     }
 
@@ -20,8 +24,17 @@ public class PlayerMovementController : MonoBehaviour
     {
         SetDestination();
         Locomotion();
+        UpdateAnimator();
     }
 
+    private void UpdateAnimator()
+    {
+        // Récupération de la vitesse du point de vue du joueur (et non du monde)
+        Vector3 localVelocity = transform.InverseTransformDirection(_navMeshAgent.velocity);
+        // Envoi la vitesse au blend tree
+        _animator.SetFloat("forwardSpeed", localVelocity.z);
+
+    }
 
     private void SetDestination()
     {
