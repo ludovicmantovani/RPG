@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06953fae5cfa77e42bd95bdc09a0efb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: Dev_scene
+  _sceneToLoad: MainMenu
+  _switchSM: {fileID: 0}
 --- !u!54 &3556939559256752428
 Rigidbody:
   m_ObjectHideFlags: 0

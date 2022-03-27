@@ -2576,10 +2576,6 @@ PrefabInstance:
       propertyPath: _switchSM
       value: 
       objectReference: {fileID: 1744006980}
-    - target: {fileID: 4894237159979467641, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
-      propertyPath: _sceneToLoad
-      value: MainMenu
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
 --- !u!4 &1555501198 stripped
