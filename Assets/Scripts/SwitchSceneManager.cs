@@ -37,28 +37,33 @@ public class SwitchSceneManager : MonoBehaviour
         SceneManager.LoadScene("Galerie");
     }
 
+    public void GotoScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void Exit()
     {
         if (_player)
         {
             // Sauvegarde
+            PlayerPrefs.SetString("Localisation", SceneManager.GetActiveScene().name);
         }
         Application.Quit();
     }
 
     private void Start()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
         //Si présence du player dans la scene
         if (_player)
         {
-            //On sauvegarde la localisation
+            //Sauvegarde de la localisation
+            PlayerPrefs.SetString("Localisation", SceneManager.GetActiveScene().name);
         }
         if (_continueButton)
         {
-            //Si présence d'une sauvegarde
-            //Activation du bouton
-            _continueButton.interactable = true;
+            if (PlayerPrefs.HasKey("Localisation")) //Si présence d'une sauvegarde
+                _continueButton.interactable = true; // On active le bouton continuer
         }
     }
 }

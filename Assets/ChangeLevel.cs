@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeLevel : MonoBehaviour
 {
     [SerializeField] private string _sceneToLoad;
+    [SerializeField] private SwitchSceneManager _switchSM;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
