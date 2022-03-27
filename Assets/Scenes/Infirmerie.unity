@@ -3919,6 +3919,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 530600251}
     - target: {fileID: 2296372642792851289, guid: adad294285052e94c8c1581907ffc060, type: 3}
+      propertyPath: _switchSM
+      value: 
+      objectReference: {fileID: 1744006980}
+    - target: {fileID: 2296372642792851289, guid: adad294285052e94c8c1581907ffc060, type: 3}
+      propertyPath: _canPatrol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296372642792851289, guid: adad294285052e94c8c1581907ffc060, type: 3}
       propertyPath: _wayPointList.Array.data[0]
       value: 
       objectReference: {fileID: 1273484479}

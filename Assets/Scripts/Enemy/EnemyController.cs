@@ -9,6 +9,9 @@ public class EnemyController : MonoBehaviour
 {
     #region PRIVATE VARIABLE
     [SerializeField] private GameObject _player;
+    [SerializeField] private SwitchSceneManager _switchSM;
+    [SerializeField] private string _sceneToLoadOnAttack;
+
     [SerializeField] private float _minPlayerDistanceToAttack = 0.75f;
     [SerializeField] private float _walkSpeed = 2.5f;
     [SerializeField] private float _runSpeed = 3.5f;
@@ -110,9 +113,9 @@ public class EnemyController : MonoBehaviour
         float playerDistance = Vector3.Distance(_player.transform.position, transform.position);
         // Test si le player est à portée
         _onAttack = playerDistance <= _minPlayerDistanceToAttack ? true : false;
-        if (_onAttack)
+        if (_onAttack && _switchSM != null && _sceneToLoadOnAttack != null)
         {
-            Debug.Log("Lancement de la scene de combat");
+            _switchSM.GotoScene(_sceneToLoadOnAttack);
         }
         
     }
