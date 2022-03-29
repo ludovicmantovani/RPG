@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
     {
         Locomotion();
         Attack();
-        UpdateAnimation();
+        UpdateAnimator();
     }
 
     private void Awake()
@@ -120,13 +120,13 @@ public class EnemyController : MonoBehaviour
         
     }
 
-    private void UpdateAnimation()
+    private void UpdateAnimator()
     {
-        if (_animator)
-        {
-            //_animator.SetBool("Pursuit", _onPursuit);
-            //_animator.SetBool("Attack", _onAttack);
-        }
+        // Récupération de la vitesse du point de vue de l'ennemi (et non du monde)
+        Vector3 localVelocity = transform.InverseTransformDirection(_navMeshAgent.velocity);
+        // Envoi la vitesse au blend tree
+        _animator.SetFloat("forwardSpeed", localVelocity.z);
+
     }
 
     private void ChooseRandomTarget()
