@@ -1,0 +1,1 @@
+Le fbx du zombi et surtout le point méta sont dispo ici : https://www.dropbox.com/sh/849ut6wd7drqt4h/AAA0RcqFKW3thwfT_T7GbqEqa?dl=0
