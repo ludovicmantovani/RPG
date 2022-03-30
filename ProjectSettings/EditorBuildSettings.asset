@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 528ad0573cf98134da391096de6fe097
   - enabled: 1
-    path: Assets/Scenes/Infirmerie.unity
-    guid: 9f29fe56d3a4dd14897ec28413c5b28b
+    path: Assets/Scenes/Infirmerie2.unity
+    guid: aa8c6818e03ffa745bf7180480b8f658
   - enabled: 1
     path: Assets/Scenes/Combat.unity
     guid: bb605218762d4f74ea5209f5ff7929f1
+  - enabled: 1
+    path: Assets/Scenes/Dev_scene.unity
+    guid: 1d236b1d1ac678348bbc25239b788d02
+  - enabled: 1
+    path: Assets/Scenes/Galerie.unity
+    guid: 8d0cebe4caf631e439ef898d83c6caa4
   m_configObjects: {}
