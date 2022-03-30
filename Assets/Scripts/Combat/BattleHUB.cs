@@ -12,13 +12,15 @@ public class BattleHUB : MonoBehaviour
     public void SetHUB(Unit unit)
     {
         _nameText.text = unit.Name;
-        _levelText.text = "Lvl " + unit.Level;
+        // _levelText.text = "Lvl " + unit.Level;
+        _levelText.text = unit.CurrentHP + "/" + unit.MaxHP;
         _hpSlider.maxValue = unit.MaxHP;
         _hpSlider.value = unit.CurrentHP;
     }
 
-    public void SetHP(int HP)
+    public void SetHP(int HP, int maxHP)
     {
+        _levelText.text = HP + "/" + maxHP;
         _hpSlider.value = HP;
     }
 }
