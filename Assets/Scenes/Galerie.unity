@@ -386,7 +386,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746273538}
-  m_LocalRotation: {x: 1e-45, y: 0.9402716, z: -0.34042525, w: 1e-45}
+  m_LocalRotation: {x: -1e-45, y: 0.9402716, z: -0.34042525, w: -3e-45}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -472,7 +472,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996630787}
-  m_LocalRotation: {x: -3.2499482e-11, y: 0.9463082, z: -0.32326594, w: 9.272661e-11}
+  m_LocalRotation: {x: 3.2499482e-11, y: 0.9463082, z: -0.32326594, w: -9.272661e-11}
   m_LocalPosition: {x: 0, y: 3.5, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -805,6 +805,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8731951916521688920, guid: 22326a4ed0836ab40bc846e1b6fdba24, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731951917612798918, guid: 22326a4ed0836ab40bc846e1b6fdba24, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 255
+      objectReference: {fileID: 0}
     - target: {fileID: 8731951917691448224, guid: 22326a4ed0836ab40bc846e1b6fdba24, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -961,7 +969,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845408161}
-  m_LocalRotation: {x: -0.000000007447152, y: 0.952017, z: -0.30604526, w: -0.000000023165903}
+  m_LocalRotation: {x: 0.000000007447152, y: 0.952017, z: -0.30604526, w: 0.000000023165903}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
