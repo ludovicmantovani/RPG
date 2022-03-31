@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(SphereCollider))]
 public class EnemyController : MonoBehaviour
 {
-    #region PRIVATE VARIABLE
+    [SerializeField] private string _name;
     [SerializeField] private GameObject _player;
     [SerializeField] private SwitchSceneManager _switchSM;
     [SerializeField] private string _sceneToLoadOnAttack;
@@ -30,11 +30,11 @@ public class EnemyController : MonoBehaviour
         get { return _currentTarget; }
     }
 
+    public string Name { get => _name;}
+
     private bool _onPursuit = false;
     private bool _onAttack = false;
-    #endregion
 
-    #region BUILTIN METHOD
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -69,9 +69,7 @@ public class EnemyController : MonoBehaviour
             _onPursuit = false;
     }
 
-    #endregion
 
-    #region CUSTOM METHOD
     private void Locomotion()
     {
         if (_onAttack == false)
@@ -145,5 +143,4 @@ public class EnemyController : MonoBehaviour
             _currentTarget = futurTarget;
         }
     }
-    #endregion
 }

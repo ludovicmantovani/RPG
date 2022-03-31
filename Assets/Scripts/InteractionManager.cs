@@ -14,6 +14,8 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private string _startingDialogInfo;
     [SerializeField] private Transform _startingPlayerLocation;
 
+    [SerializeField] private List<EnemyController> _enemyControllers;
+
 
     void Start()
     {
@@ -23,6 +25,12 @@ public class InteractionManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("Start", Time.time);
             _dialogueText.Display(_startingDialogInfo);
+        }
+
+        foreach (var enemyController in _enemyControllers)
+        {
+            if (PlayerPrefs.GetInt(enemyController.Name, 0) <= 0)
+                enemyController.gameObject.SetActive(false);
         }
             
     }
