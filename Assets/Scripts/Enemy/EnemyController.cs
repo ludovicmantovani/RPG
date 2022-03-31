@@ -113,6 +113,7 @@ public class EnemyController : MonoBehaviour
         _onAttack = playerDistance <= _minPlayerDistanceToAttack ? true : false;
         if (_onAttack && _switchSM != null && _sceneToLoadOnAttack != null)
         {
+            PlayerPrefs.SetString("CurrentEnemy", _name);
             _switchSM.GotoScene(_sceneToLoadOnAttack);
         }
         

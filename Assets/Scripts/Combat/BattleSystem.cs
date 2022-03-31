@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 // Etats possibles
@@ -50,6 +51,15 @@ public class BattleSystem : MonoBehaviour
     {
         _playerUnit = Instantiate(_playerPrefab, _playerBattleStation).GetComponent<Unit>();
         _enemyUnit = Instantiate(_enemyPrefab, _enemyBattleStation).GetComponent<Unit>();
+
+        if (PlayerPrefs.HasKey("CurrentEnemy"))
+        {
+            string enemyName = PlayerPrefs.GetString("CurrentEnemy");
+            int enemyPV = PlayerPrefs.GetInt(enemyName);
+            _enemyUnit.Name = enemyName;
+            _enemyUnit.MaxHP = enemyPV;
+            _enemyUnit.CurrentHP = enemyPV;
+        }
 
         _dialogue.text = _enemyUnit.Name + " vous attaque !";
 
@@ -131,14 +141,25 @@ public class BattleSystem : MonoBehaviour
 
     void EndBattle()
     {
+        PlayerPrefs.SetInt(_enemyUnit.Name, _enemyUnit.CurrentHP);
+        PlayerPrefs.DeleteKey("CurrentEnemy");
         if (_state == BattleState.WON)
         {
+            PlayerPrefs.DeleteKey(_enemyUnit.Name);
             _dialogue.text = "Vous avez gagné !";
         }
         else if (_state == BattleState.LOST)
         {
             _dialogue.text = "Vous avez perdu !";
         }
+        StartCoroutine(ReturnToScene());
+    }
+
+
+    IEnumerator ReturnToScene()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(PlayerPrefs.GetString("Localisation"));
     }
 
     IEnumerator EnemyTurn()

@@ -12,7 +12,6 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private PlayerMovementController _playerMovementController;
 
     [SerializeField] private string _startingDialogInfo;
-    [SerializeField] private Transform _startingPlayerLocation;
 
     [SerializeField] private List<EnemyController> _enemyControllers;
 
