@@ -7,13 +7,21 @@ using UnityEngine.AI;
 public class InteractionManager : MonoBehaviour
 {
 
-    [SerializeField] Text _dialogueText;
+    [SerializeField] Dialogue _dialogueText;
     [SerializeField] ChangeLevel _changeLevelTrigger;
+
+    [SerializeField] string _startingDialogInfo;
 
 
     void Start()
     {
         _changeLevelTrigger.CanChangeLevel = false;
+        if (!PlayerPrefs.HasKey("Start")) // Si nouvelle partie
+        {
+            PlayerPrefs.SetFloat("Start", Time.time);
+            _dialogueText.Display(_startingDialogInfo);
+        }
+            
     }
 
 

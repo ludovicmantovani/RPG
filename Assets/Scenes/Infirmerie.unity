@@ -1090,7 +1090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6315163825426910886, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.07
+      value: -6.41
       objectReference: {fileID: 0}
     - target: {fileID: 6315163825426910886, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1536,6 +1536,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogueText: {fileID: 0}
+  _changeLevelTrigger: {fileID: 1509875443}
+  _startingDialogInfo: 
 --- !u!1 &729062663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3270,6 +3272,7 @@ GameObject:
   - component: {fileID: 1385295932}
   - component: {fileID: 1385295934}
   - component: {fileID: 1385295933}
+  - component: {fileID: 1385295935}
   m_Layer: 5
   m_Name: TextDialogue
   m_TagString: Untagged
@@ -3339,6 +3342,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385295931}
   m_CullTransparentMesh: 1
+--- !u!114 &1385295935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385295931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd96c516e1b95f54f952d0072549bb72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textUI: {fileID: 1385295933}
 --- !u!1001 &1390818564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3671,6 +3687,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2fe7f9dc74a5ff4696014f411430c80, type: 3}
+--- !u!114 &1509875443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4894237159979467641, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
+  m_PrefabInstance: {fileID: 1543294529}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06953fae5cfa77e42bd95bdc09a0efb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1509922495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4874802182062810, guid: 5171d5eb12e0f184a8761aa4157f7d00, type: 3}
@@ -3786,7 +3813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3556939559256752429, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.67
+      value: -9.18
       objectReference: {fileID: 0}
     - target: {fileID: 3556939559256752429, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3825,9 +3852,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4894237159979467641, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
+      propertyPath: _dialogue
+      value: 
+      objectReference: {fileID: 1385295935}
+    - target: {fileID: 4894237159979467641, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
       propertyPath: _switchSM
       value: 
       objectReference: {fileID: 1744006980}
+    - target: {fileID: 4894237159979467641, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
+      propertyPath: _closedText
+      value: Pas possible
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1a7476b32213914e9a1e54c811106c4, type: 3}
 --- !u!4 &1555501198 stripped

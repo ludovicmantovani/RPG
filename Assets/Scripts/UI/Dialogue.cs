@@ -17,7 +17,7 @@ public class Dialogue : MonoBehaviour
         
     }
 
-    public void Display(string text, float time)
+    public void Display(string text, float time = 0)
     {
         StartCoroutine(DisplayText(text, time));
     }
@@ -27,6 +27,7 @@ public class Dialogue : MonoBehaviour
         _textUI.text = text;
         
         yield return new WaitForSeconds(seconds);
-        _textUI.text = "";
+        if (seconds > 0f)
+            _textUI.text = "";
     }
 }
