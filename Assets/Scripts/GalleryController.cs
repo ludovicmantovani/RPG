@@ -51,7 +51,8 @@ public class GalleryController : MonoBehaviour
                 Destroy(_currentModel);
             }
             _currentModel = Instantiate(_modelPrefabs[_index], _camTarget.transform.position, Quaternion.identity, _camTarget.transform);
-            _modelName.text = _currentModel.name.Substring(0, _currentModel.name.Length - 7);
+            //_modelName.text = _currentModel.name.Substring(0, _currentModel.name.Length - 7);
+            _modelName.text = _currentModel.GetComponent<TransformInitialization>().Createur;
         }
     }
 }
