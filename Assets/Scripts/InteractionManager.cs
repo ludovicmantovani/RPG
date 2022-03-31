@@ -8,10 +8,12 @@ public class InteractionManager : MonoBehaviour
 {
 
     [SerializeField] Text _dialogueText;
+    [SerializeField] ChangeLevel _changeLevelTrigger;
+
 
     void Start()
     {
-        
+        _changeLevelTrigger.CanChangeLevel = false;
     }
 
 
