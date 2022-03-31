@@ -7,15 +7,18 @@ using UnityEngine.AI;
 public class InteractionManager : MonoBehaviour
 {
 
-    [SerializeField] Dialogue _dialogueText;
-    [SerializeField] ChangeLevel _changeLevelTrigger;
+    [SerializeField] private Dialogue _dialogueText;
+    [SerializeField] private ChangeLevel _changeLevelTrigger;
+    [SerializeField] private PlayerMovementController _playerMovementController;
 
-    [SerializeField] string _startingDialogInfo;
+    [SerializeField] private string _startingDialogInfo;
+    [SerializeField] private Transform _startingPlayerLocation;
 
 
     void Start()
     {
-        _changeLevelTrigger.CanChangeLevel = false;
+        PlayerPrefs.DeleteKey("Start"); // TODO delete me
+        //_changeLevelTrigger.CanChangeLevel = false;
         if (!PlayerPrefs.HasKey("Start")) // Si nouvelle partie
         {
             PlayerPrefs.SetFloat("Start", Time.time);

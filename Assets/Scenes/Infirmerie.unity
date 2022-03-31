@@ -1082,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6315163825426910886, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.77
+      value: -3.59
       objectReference: {fileID: 0}
     - target: {fileID: 6315163825426910886, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1090,7 +1090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6315163825426910886, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.41
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 6315163825426910886, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1131,6 +1131,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6694645543178048540, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
   m_PrefabInstance: {fileID: 530600250}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &530600255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5776219977794178274, guid: adda4e47cc710b34eb3e3a49bdf3bc13, type: 3}
+  m_PrefabInstance: {fileID: 530600250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530600251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd17e53eea8fb3d4bac6f213d31f50d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &551113771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,9 +1546,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed05e2d7e1737546a55bcd800bec8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogueText: {fileID: 0}
+  _dialogueText: {fileID: 1385295935}
   _changeLevelTrigger: {fileID: 1509875443}
-  _startingDialogInfo: 
+  _playerMovementController: {fileID: 530600255}
+  _startingDialogInfo: "Mais que se passe t-il ici ? Je me r\xE9veille dans l'infirmerie
+    du vaisseaux. Tout est en d\xE9sordre. O\xF9 son t-il tous pass\xE9 ?"
+  _startingPlayerLocation: {fileID: 0}
 --- !u!1 &729062663
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,10 @@ public class PlayerMovementController : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
 
+    private bool _canMove = true;
+
+    public bool CanMove { get => _canMove; set => _canMove = value; }
+
     void Start()
     {
         // Recuperation du nav mesh agent
@@ -23,7 +27,15 @@ public class PlayerMovementController : MonoBehaviour
     void Update()
     {
         SetDestination();
-        Locomotion();
+        if (_canMove)
+        {
+            _navMeshAgent.isStopped = false;
+            Locomotion();
+        }
+        else if(_navMeshAgent)
+        {
+            _navMeshAgent.isStopped = true;
+        }
         UpdateAnimator();
     }
 

@@ -13,7 +13,7 @@ public class ChangeLevel : MonoBehaviour
     [SerializeField] private string _closedText = "Impossible de sortir";
     [SerializeField] private float _closedTextDuration = 5f;
 
-    private bool _canChangeLevel = false;
+    [SerializeField] private bool _canChangeLevel = false;
 
     public bool CanChangeLevel {set => _canChangeLevel = value; }
 
