@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab15cfdad8ae394293ace0f7d04dc58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _createur: 
+  _createur: Jade FRATREZ
   _position: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
   _scale: {x: 0, y: 0, z: 0}
