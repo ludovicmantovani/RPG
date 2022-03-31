@@ -23,8 +23,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private BattleHUB _enemyHUB;
     [SerializeField] private BattleHUB _playerHUB;
 
+    [SerializeField] private Button _arcButton;
     [SerializeField] private int _arcMinDamage = 0;
     [SerializeField] private int _arcMaxDamage = 4;
+
+    [SerializeField] private Button _healButton;
     [SerializeField] private int _heal = 4;
 
 
@@ -34,6 +37,12 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         _state = BattleState.START;
+        if (!PlayerPrefs.HasKey("Arc"))
+            _arcButton.interactable = false;
+
+        if (!PlayerPrefs.HasKey("Santee"))
+            _healButton.interactable = false;
+
         StartCoroutine(CreateBattle());
     }
 
