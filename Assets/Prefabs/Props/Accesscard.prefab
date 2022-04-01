@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8826155715394439074}
   - component: {fileID: 6744204857341539176}
   - component: {fileID: 5087034469871899298}
+  - component: {fileID: 4333641018797146686}
+  - component: {fileID: 7647043477391878918}
   m_Layer: 0
   m_Name: Accesscard
   m_TagString: Untagged
@@ -97,3 +99,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
+--- !u!135 &4333641018797146686
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5087034469871899325}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.003
+  m_Center: {x: -0.000099685654, y: 0.00011396076, z: -0.000049861424}
+--- !u!114 &7647043477391878918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5087034469871899325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e196ec69dc972844387c50945df42576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyName: HallKey
+  _message: "J'ai la carte pour acc\xE9der au couloir maintenant."
+  _seconds: 2
+  _dialogueUIText: {fileID: 0}

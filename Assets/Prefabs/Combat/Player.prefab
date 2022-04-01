@@ -48,8 +48,8 @@ MonoBehaviour:
   _level: 1
   _minDamage: 1
   _maxDamage: 4
-  _maxHP: 30
-  _currentHP: 30
+  _maxHP: 25
+  _currentHP: 25
 --- !u!1 &7348944906957644805
 GameObject:
   m_ObjectHideFlags: 0

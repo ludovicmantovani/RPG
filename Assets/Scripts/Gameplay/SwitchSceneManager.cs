@@ -21,7 +21,7 @@ public class SwitchSceneManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
 
         // Création des zombies
-        PlayerPrefs.SetInt("Zombini", 5);
+        PlayerPrefs.SetInt("Zombini", 30);
 
         // Allez au jeu
         GoToGame();

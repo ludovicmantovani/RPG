@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeLevel : MonoBehaviour
 {
+    [SerializeField] private string _ActivationKeyName;
     [SerializeField] private string _sceneToLoad;
     [SerializeField] private SwitchSceneManager _switchSM;
 
@@ -21,7 +22,7 @@ public class ChangeLevel : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            if (_canChangeLevel)
+            if (PlayerPrefs.GetString(_ActivationKeyName, "Disabled") == "Active")
             {
                 SceneManager.LoadScene(_sceneToLoad);
             }

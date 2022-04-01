@@ -8,7 +8,6 @@ public class InteractionManager : MonoBehaviour
 {
 
     [SerializeField] private Dialogue _dialogueText;
-    [SerializeField] private ChangeLevel _changeLevelTrigger;
     [SerializeField] private PlayerMovementController _playerMovementController;
 
     [SerializeField] private string _startingDialogInfo;
@@ -18,8 +17,6 @@ public class InteractionManager : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.DeleteKey("Start"); // TODO delete me
-        //_changeLevelTrigger.CanChangeLevel = false;
         if (!PlayerPrefs.HasKey("Start")) // Si nouvelle partie
         {
             PlayerPrefs.SetFloat("Start", Time.time);
