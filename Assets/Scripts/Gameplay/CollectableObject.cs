@@ -8,10 +8,11 @@ public class CollectableObject : MonoBehaviour
     [SerializeField] private float _seconds = 2f;
 
     [SerializeField] private Dialogue _dialogueUIText;
+    [SerializeField] private bool _disableAfterCollect = true;
 
     private void Start()
     {
-        if (PlayerPrefs.GetString(_keyName, "Disabled") == "Active")
+        if (!_keyName.Equals("") && PlayerPrefs.GetString(_keyName, "Disabled") == "Active" && _disableAfterCollect)
         {
             gameObject.SetActive(false);
         }
@@ -21,10 +22,15 @@ public class CollectableObject : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("Player"))
         {
-            PlayerPrefs.SetString(_keyName, "Active");
-            gameObject.SetActive(false);
+            if (!_keyName.Equals(""))
+            {
+                PlayerPrefs.SetString(_keyName, "Active");
+                if (_disableAfterCollect)
+                    gameObject.SetActive(false);
+            }
             if (!_message.Equals(""))
                 _dialogueUIText.Display(_message, _seconds);
+            
         }
     }
 }

@@ -23,6 +23,8 @@ public class SwitchSceneManager : MonoBehaviour
         // Création des zombies
         PlayerPrefs.SetInt("Zombini", 30);
 
+        PlayerPrefs.SetString("BureauClef", "Active");
+
         // Allez au jeu
         GoToGame();
     }
@@ -31,7 +33,8 @@ public class SwitchSceneManager : MonoBehaviour
     {
         //Si localisation enregistrée, on la récupère
         //Si non c'est que l'on commence une nouvelle partie
-        string sceneName = PlayerPrefs.GetString("Localisation", "Infirmerie");
+        string sceneName = PlayerPrefs.GetString("Localisation", "Couloir");
+        //string sceneName = PlayerPrefs.GetString("Localisation", "Infirmerie");
         SceneManager.LoadScene(sceneName);
     }
 
@@ -57,6 +60,7 @@ public class SwitchSceneManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.SetString(SceneManager.GetActiveScene().name + "Clef", "Active");
         //Si présence du player dans la scene
         if (_player)
         {

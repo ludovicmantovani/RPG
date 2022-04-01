@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
@@ -17,9 +18,9 @@ public class InteractionManager : MonoBehaviour
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("Start")) // Si nouvelle partie
+        if (!PlayerPrefs.HasKey("Start" + SceneManager.GetActiveScene().name))
         {
-            PlayerPrefs.SetFloat("Start", Time.time);
+            PlayerPrefs.SetFloat("Start" + SceneManager.GetActiveScene().name, Time.time);
             _dialogueText.Display(_startingDialogInfo);
         }
 
