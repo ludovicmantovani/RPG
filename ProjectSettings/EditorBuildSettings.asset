@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Couloir.unity
     guid: 555380ebb9929944b9319c6eb0caf61b
+  - enabled: 1
+    path: Assets/Scenes/Bureau.unity
+    guid: ca66cfbd82581cf4f84e459943ce0804
+  - enabled: 1
+    path: Assets/Scenes/Laboratoire.unity
+    guid: bdc7deb60d177e6468f3b0cf8ee3a30d
+  - enabled: 1
+    path: Assets/Scenes/Fin.unity
+    guid: 6db3b462c13fcb44d9e94a8a0cdd066a
   m_configObjects: {}
